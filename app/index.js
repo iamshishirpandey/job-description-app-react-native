@@ -21,11 +21,23 @@ const Home = () => {
             <ScreenHeaderBtn iconURL={icons.menu} dimension="60%" />
           ),
           headerRight: () => (
-            <ScreenHeaderBtn iconURL={icons.profile} dimension="100%" />
+            <ScreenHeaderBtn iconURL={images.profile} dimension="100%" />
           ),
           headerTitle: "",
         }}
       />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View
+          style={{
+            flex: 1,
+            padding: SIZES.medium,
+          }}
+        >
+          <Welcome />
+          <Popularjobs />
+          <Nearbyjobs />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
